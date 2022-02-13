@@ -9,7 +9,6 @@ todoList.addEventListener('click', deleteChek);
 
 //functions
 function addtodo(event){
-    console.log("hello");
     //no refrech l la page
     event.preventDefault();
     //---
@@ -53,6 +52,14 @@ function addtodo(event){
     todoList.appendChild(todoDiv);
     //clear todoinput value
     todoInput.value = "";
+
+
+
+
+
+
+
+
 }
 function deleteChek(e) {
     console.log(e.target); 
@@ -60,8 +67,15 @@ function deleteChek(e) {
     //delet todo
     if(item.classList[0] === "trash-btn"){
         const todo = item.parentElement;
-        todo.remove();
+        //animation
+        todo.classList.add("fall");
+        todo.addEventListener("transitionend", function() {
+            todo.remove();
+
+        });
     }
+
+
     //check mark
     if(item.classList[0] === "complete-btn") {
         const todo = item.parentElement;
