@@ -11,11 +11,9 @@
     </head>
     <body>
         <header><h1>todo list</h1></header>
-        <form>
+        <form onsubmit="event.preventDefault();">
             <input type="text" class="todo-input">
             <button class="todo-button" type="submit"><i class="fas fa-plus-square"></i></button>
-           
-
         </form>
          <div class="para"><p>here u have your list that you need to do</p></div>
         <div class="todo-container">
