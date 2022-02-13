@@ -1,10 +1,10 @@
 //selectors
 const todoInput =document.querySelector(".todo-input");
-const todoButton =document.querySelector(".todo-button");
+const todoButton =document.querySelector("#form");
 const todoList =document.querySelector(".todo-list");
 
 //evet listeners
-todoButton.addEventListener('click', addtodo);
+todoButton.addEventListener('submit', addtodo);
 todoList.addEventListener('click', deleteChek);
 
 //functions
